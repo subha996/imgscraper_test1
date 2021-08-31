@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/scrap.js') }}"></script>
+
+
+<div class="content">
+    <h1 style="text-align: center">Please enter the below details to proceed.</h1>
+
+    <div class="form">
+        <form action="/send_email" method="POST">
+            <div class="inFrm">
+                <div class="inDiv sB"><input type="text" name="content" id="content" placeholder="search here"/></div>
+                <div class="inDiv sB"><input type="text" name="numImg" id="numImg" placeholder="Download numbers"/></div>
+                <div class="inDiv"><input type="text" name="nEmail" id="nEmail" placeholder="Email id"/></div>
+                <br/><div class="inDiv"><label class="Shedul" for="Sheduletime">Sheduler (date and time):</label>
+                <input type="datetime-local" class="Shedul" id="Sheduletime" name="Sheduletime" placeholder="Sheduler (date and time)"><br/></div>
+                    <br/><br/>
+                <div class="inDiv"><input id="shld" type="button" value="Shedule for later"/> <input id="dwnlN" class="btn" type="submit" value="Download now"/></div>
+            </div>
+        </form>
+    </div>
+</div>
+
